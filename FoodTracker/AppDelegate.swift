@@ -8,12 +8,16 @@
 
 import UIKit
 
+// Using this attribute is equivalent to calling the UIApplicationMain function and passing your AppDelegate class's name as the name of the delegate class. In response, the system creates an application object. The system also creates an instance of your AppDelegate class, and assigs it to the application object. Finally, the system launches your app.
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+// The AppDelegate class adops the UIApplicationDelegate protocol. This protocol defines a number of methods you use to set up your app, to respond to the app's state changes, and to handle other app-level events.
+    
+    // Properties of AppDelegate
     var window: UIWindow?
+    // The window property stores a reference to the app's window. This window represents the root of your app's view hierarchy. It is where all of your app content is drawn. Note that this is an optional (bcuz of question mark) property, so can be nil at some point
 
-
+    // The following stub methods allow the application object to communicate with the app delegate. During an app state transition the application object calls the corresponding delegate method, giving your app an opportunity to respond. Each of the delegate methods has a default behavior. If you leave the template implementation empty or delete it from your AppDelegate class, you get the default behavior whenever that method is called.  
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
