@@ -38,6 +38,25 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         mealNameLabel.text = textField.text
     }
     
+    //MARK: UIImagePickerControllerDelegate
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        // Dismiss the picker if the user canceled.
+        dismiss(animated: true, completion: nil)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        // The info dictionary always contains the original image that was selected in the picker. It may also contain an edited version of that image, if one exists. To keep things simple, you’ll use the original, unedited image for the meal photo.
+        // This code accesses the original, unedited image from the info dictionary. It safely unwraps the optional returned by the dictionary and casts it as a UIImage object. The expectation is that the unwrapping and casting operations will never fail. If they do, it represents either a bug in your app that needs to be fixed at design time. The fatalError() method logs an error message to the console, including the contents of the info dictionary, and then causes the app to terminate—preventing it from continuing in an invalid state.
+        guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+        }
+
+        // Set photoImageView to display the selected image.
+        photoImageView.image = selectedImage
+        
+        // Dismiss the picker.
+        dismiss(animated: true, completion: nil)
+    }
+    
     //MARK: Actions
     @IBAction func setDefaultLabelText(_ sender: UIButton) {
         mealNameLabel.text = "Default Text"
