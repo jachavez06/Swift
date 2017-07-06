@@ -10,7 +10,7 @@
 import UIKit
 
 // As you can see in the ViewController.swift file, the template’s implementation overrides both the viewDidLoad() and didReceiveMemoryWarning() methods; however, the template’s stub implementation doesn’t do anything yet, except call the UIViewController version of these methods. You can add your own code to customize the view controller’s response to these events.
-class ViewController: UIViewController, UITextFieldDelegate{
+class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // MARK: Properties
     @IBOutlet weak var nameTextField: UITextField! // stores a reference to the text field and configures the storyboard to set up that connection.
     @IBOutlet weak var mealNameLabel: UILabel!
