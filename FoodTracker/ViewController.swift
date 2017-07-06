@@ -21,7 +21,9 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Handle the text field's user input through delegate callbacks.
+        nameTextField.delegate = self
     }
 
     //MARK: Actions
