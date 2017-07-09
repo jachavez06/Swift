@@ -9,7 +9,7 @@
 import UIKit
 
 // Custom view subclass of UIView.
-class RatingControl: UIStackView {
+@IBDesignable class RatingControl: UIStackView {
 
     //MARK: Properties
     private var ratingButtons = [UIButton]()    // Don't want anything outside the RatingControl class to access buttons, so we set them to private
