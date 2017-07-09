@@ -11,6 +11,11 @@ import UIKit
 // Custom view subclass of UIView.
 class RatingControl: UIStackView {
 
+    //MARK: Properties
+    private var ratingButtons = [UIButton]()    // Don't want anything outside the RatingControl class to access buttons, so we set them to private
+    
+    var rating = 0  // Need to be able to read and write this value from outside the class, so leave it as internal access. 
+    
     //MARK: Initialization
     
     override init(frame: CGRect) {
