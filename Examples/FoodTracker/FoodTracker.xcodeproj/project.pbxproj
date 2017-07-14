@@ -14,6 +14,7 @@
 		8837C4DF1F09AE52008FEE2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8837C4DD1F09AE52008FEE2B /* LaunchScreen.storyboard */; };
 		8837C4EA1F09AE52008FEE2B /* FoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837C4E91F09AE52008FEE2B /* FoodTrackerTests.swift */; };
 		888CAE281F12C4C500AE879C /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888CAE271F12C4C500AE879C /* RatingControl.swift */; };
+		88E9923A1F185ED100B6A3E6 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E992391F185ED100B6A3E6 /* Meal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		8837C4E91F09AE52008FEE2B /* FoodTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerTests.swift; sourceTree = "<group>"; };
 		8837C4EB1F09AE52008FEE2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		888CAE271F12C4C500AE879C /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		88E992391F185ED100B6A3E6 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				8837C4D41F09AE52008FEE2B /* AppDelegate.swift */,
 				8837C4D61F09AE52008FEE2B /* ViewController.swift */,
+				88E992391F185ED100B6A3E6 /* Meal.swift */,
 				888CAE271F12C4C500AE879C /* RatingControl.swift */,
 				8837C4D81F09AE52008FEE2B /* Main.storyboard */,
 				8837C4DB1F09AE52008FEE2B /* Assets.xcassets */,
@@ -203,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E9923A1F185ED100B6A3E6 /* Meal.swift in Sources */,
 				8837C4D71F09AE52008FEE2B /* ViewController.swift in Sources */,
 				888CAE281F12C4C500AE879C /* RatingControl.swift in Sources */,
 				8837C4D51F09AE52008FEE2B /* AppDelegate.swift in Sources */,
