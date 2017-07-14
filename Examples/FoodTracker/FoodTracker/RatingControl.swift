@@ -14,7 +14,11 @@ import UIKit
     //MARK: Properties
     private var ratingButtons = [UIButton]()    // Don't want anything outside the RatingControl class to access buttons, so we set them to private
     
-    var rating = 0  // Need to be able to read and write this value from outside the class, so leave it as internal access.
+    var rating = 0 {  // Need to be able to read and write this value from outside the class, so leave it as internal access.
+        didSet{
+            updateButtonSelectionStates()
+        }
+    }
     @IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0) {
         didSet {
             setupButtons()
@@ -40,7 +44,20 @@ import UIKit
     
     //MARK: Button Action
     func ratingButtonTapped(button: UIButton){
-        print("Button pressed.")
+        guard let index = ratingButtons.index(of: button) else {
+            fatalError("The button, \(button), is not in the ratingButtons array: \(ratingButtons)")
+        }
+        
+        // Calculate the rating of the selected button.
+        let selectedRating = index + 1
+        
+        if selectedRating == rating {
+            // If the selected star represents the current rating, reset the rating to 0. 
+            rating = 0
+        } else {
+            // Otherwise, set the rating to the selected star.
+            rating = selectedRating
+        }
     }
     
     //MARK: Private Methods
@@ -82,6 +99,14 @@ import UIKit
             
             // Add the new button to the rating button array.
             ratingButtons.append(button)
+        }
+        updateButtonSelectionStates()
+    }
+    
+    private func updateButtonSelectionStates(){
+        for (index, button) in ratingButtons.enumerated() {
+            // If the index of a busson is less than the rating, that button should be selected.
+            button.isSelected = index < rating
         }
     }
 }
