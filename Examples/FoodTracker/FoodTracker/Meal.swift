@@ -15,4 +15,10 @@ class Meal {
     var name: String
     var photo: UIImage? // Image optional
     var rating: Int
+    
+    //MARK: Initialization
+    
+    init(name: String, photo: UIImage?, rating: Int){
+        
+    }
 }
