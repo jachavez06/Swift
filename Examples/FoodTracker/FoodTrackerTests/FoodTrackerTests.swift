@@ -29,5 +29,17 @@ class FoodTrackerTests: XCTestCase {
     // Test Case: Confirm that the Meal initializer returns nil when passed a negative rating or an empty name.
     func testMealInitializationFails(){
         
+        // Negative rating.
+        let negativeRatingMeal = Meal.init(name: "Negative", photo: nil, rating: -1)
+        XCTAssertNil(negativeRatingMeal)
+        
+        // Rating exceeds maximum
+        let largeRatingMeal = Meal.init(name: "Large", photo: nil, rating: 6)
+        XCTAssertNil(largeRatingMeal)
+        
+        // Empty string.
+        let emptyStringMeal = Meal.init(name: "", photo: nil, rating: 0)
+        XCTAssertNil(emptyStringMeal)
+        
     }
 }
