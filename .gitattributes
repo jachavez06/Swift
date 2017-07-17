@@ -8,3 +8,5 @@ Examples/FoodTracker/FoodTracker/Base.lproj linguist-generated
 Examples/FoodTracker/FoodTracker/Info.plist linguist-generated=true
 
 Examples/FoodTracker/FoodTrackerTests/Info.plist linguist-generated=true
+
+*.* linguist-language=Swift
