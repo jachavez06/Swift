@@ -6,4 +6,13 @@
 //  Copyright © 2017 Testing. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class Meal {
+    
+    //MARK: Properties
+    
+    var name: String
+    var photo: UIImage? // Image optional
+    var rating: Int
+}
