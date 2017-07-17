@@ -1,3 +1,4 @@
-README.MD linguist-documentation
-LICENSE linguist-documentation
-Examples/README.MD linguist-documentation
+README.MD linguist-documentation=true
+LICENSE linguist-documentation=true
+Examples/README.MD linguist-documentation=true
+Examples/FoodTracker/FoodTrackerTests/Info.plist linguist-generated=true
